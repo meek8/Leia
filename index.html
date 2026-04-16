@@ -17,34 +17,34 @@
             <div class="Calculator-upperDisplay">JavaScript Calc</div>
             <div class="Calculator-display" id="display">&nbsp;</div>
             <div class="Calculator-extraOperations">
-              <button class="Button Button--yellow" onclick="">x²</button>
-              <button class="Button Button--yellow" onclick="">x³</button>
-              <button class="Button Button--yellow" onclick="">%</button>
-              <button class="Button Button--yellow" onclick="">‰</button>
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('**2')">x²</button>
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('**3')">x³</button>
+              <button class="Button Button--yellow" onclick="typeSymbol('/100')">%</button>
+              <button class="Button Button--yellow" onclick="typeSymbol('/1000')">‰</button>
             </div>
             <div class="Calculator-extraOperations">
-              <button class="Button Button--yellow" onclick="">÷</button>
+              <button class="Button Button--yellow" onclick="typeSymbol('/')">÷</button>
               <button class="Button Button--yellow" onclick="pressTimes()">×</button>
-              <button class="Button Button--yellow" onclick="">-</button>
-              <button class="Button Button--yellow" onclick="">+</button>
+              <button class="Button Button--yellow" onclick="typeSymbol('-')">-</button>
+              <button class="Button Button--yellow" onclick="typeSymbol('+')">+</button>
             </div>
             <div class="Calculator-keypad">
-              <button class="Button" onclick="">9</button>
-              <button class="Button" onclick="">8</button>
-              <button class="Button" onclick="">7</button>
-              <button class="Button" onclick="">6</button>
-              <button class="Button" onclick="">5</button>
-              <button class="Button" onclick="">4</button>
+              <button class="Button" onclick="pressNine()">9</button>
+              <button class="Button" onclick="pressEight()">8</button>
+              <button class="Button" onclick="pressSeven()">7</button>
+              <button class="Button" onclick="pressSix()">6</button>
+              <button class="Button" onclick="pressFive()">5</button>
+              <button class="Button" onclick="pressFour()">4</button>
               <button class="Button" onclick="pressThree()">3</button>
               <button class="Button" onclick="pressTwo()">2</button>
-              <button class="Button" onclick="">1</button>
-              <button class="Button" onclick="">0</button>
-              <button class="Button" onclick="">.</button>
-              <button class="Button Button--red" onclick="">RSLT</button>
+              <button class="Button" onclick="pressOne()">1</button>
+              <button class="Button" onclick="pressZero()">0</button>
+              <button class="Button" onclick="typeSymbol('.')">.</button>
+              <button class="Button Button--red" onclick="loadResult()">RSLT</button>
             </div>
             <div class="Calculator-operations">
-              <button class="Button Button--red" onclick="">⌫</button>
-              <button class="Button Button--red" onclick="">CLR</button>
+              <button class="Button Button--red" onclick="backspace()">⌫</button>
+              <button class="Button Button--red" onclick="clearExpression()">CLR</button>
               <button class="Button Button--green" style="grid-row: 3 / span 2; height: 139px; font-size: 50px" onclick="execute()">⏎ </button>
             </div>
         </div>

@@ -22,8 +22,7 @@ function pressTimes() {
 */
 function updateDisplay() {
     let displayDiv = document.querySelector('#display')
-    // Hint: Will eventually need changes!
-    displayDiv.innerHTML = expression;
+   displayDiv.innerText = expression || '0';
 }
 
 /*
@@ -38,7 +37,7 @@ updateDisplay();
    Clears what's typed
 */
 function clearExpression() {
-expression = expression.slice(0, -1);
+expression = '';
 updateDisplay();
 }
 
@@ -54,14 +53,16 @@ updateDisplay();
    Adds one symbol to the expression, but with a different user-visible label
 */
 function typeSpecialSymbol(symbol, label) {
-    // TODO: Fill this in!
+expression = expression + symbol;
+updateDisplay();
 }
 
 /*
    Loads the numeric result of the last computation into the expression
 */
 function loadResult() {
-    // TODO: Fill this in!
+expression = result.toString();
+updateDisplay();
 }
 
 
@@ -70,7 +71,6 @@ function loadResult() {
 */
 function addToReceipt() {
     let receiptDiv = document.querySelector('#receipt_contents')
-    // TODO: Fill this in!
     receiptDiv.innerHTML = receipt;
 }
 
@@ -78,7 +78,10 @@ function addToReceipt() {
    Display error message to screen
 */
 function showError(message) {
-    // TODO: Fill this in!
+let displayDiv = document.querySelector('#display');
+    displayDiv.innerText = message;
+    expression = '';
 }
 
-addToReceipt(); // Call right away to show the default message
+addToReceipt();
+
