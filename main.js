@@ -1,10 +1,10 @@
-
 // Note: Two basic functions are here for you to examine.
 // Open the Console to see the results.
 function pressTwo() {
     expression = expression + '2';
     console.log('Two was pressed. New expression:', expression);
     updateDisplay();
+    
 }
 function pressTimes() {
     expression = expression + '*';
@@ -30,21 +30,24 @@ function updateDisplay() {
    Deletes the last typed character
 */
 function backspace() {
-    // TODO: Fill this in!
+expression = expression.slice(0, -1);
+updateDisplay();
 }
 
 /*
    Clears what's typed
 */
 function clearExpression() {
-    // TODO: Fill this in!
+expression = expression.slice(0, -1);
+updateDisplay();
 }
 
 /*
    Adds one symbol to the expression
 */
 function typeSymbol(symbol) {
-    // TODO: Fill this in!
+expression = expression + symbol;
+updateDisplay();
 }
 
 /*
